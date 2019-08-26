@@ -6,7 +6,7 @@ Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclu
 
 ## Instruções
 
-Você deve implementar uma API para uma aplicação de gerenciamento de TODO's.
+Você deve desenvolver uma API, utilizando Node.JS, para uma aplicação de gerenciamento de TODO's.
 
 A escolha das bibliotecas, banco de dados, arquitetura, etc, fica a seu critério.
 
@@ -16,7 +16,7 @@ Altere o arquivo README explicando o que é preciso para rodar sua aplicação.
 
 ## API
 
-Deverá ser possível:
+A API precisa ser desenvolvida em Node.JS, e deverá ser possível:
 
 - Listar todos os TODO's.
 - Adicionar um novo TODO.
