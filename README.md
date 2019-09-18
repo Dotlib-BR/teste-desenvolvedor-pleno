@@ -1,42 +1,53 @@
 [![](http://www.dotlib.com.br/site/images/footer/bra.png)](http://www.dotlib.com)
 
-# Teste para candidatos à vaga de Desenvolvedor Pleno.
+## Nossa empresa
 
-Olá caro desenvolvedor, nesse teste analisaremos seu conhecimento geral e inclusive velocidade de desenvolvimento. Abaixo explicaremos tudo o que será necessário.
+A Dot.Lib distribui conteúdo online científico e acadêmico a centenas de instituições espalhadas pela América Latina. Temos como parceiras algumas das principais editoras científicas nacionais e internacionais. Além de prover conteúdo, criamos soluções que atendem às necessidades de nossos clientes e editoras.
 
-## Instruções
+## Descrição da vaga
 
-Você deve desenvolver uma API, utilizando Node.JS, para uma aplicação de gerenciamento de TODO's.
+Buscamos um profissional que seja apaixonado por desenvolvimento, inovação e novas tecnologias, para integrar nosso time em projetos baseados em NodeJS, PHP e React JS/Native.
 
-A escolha das bibliotecas, banco de dados, arquitetura, etc, fica a seu critério.
+## Local
 
-O código precisa rodar em macOS ou Ubuntu (preferencialmente como container Docker) e precisa ter cobertura de testes.
+Barra da Tijuca, RJ
 
-Altere o arquivo README explicando o que é preciso para rodar sua aplicação.
+A oportunidade é 100% presencial.
 
-## API
+## Benefícios
 
-A API precisa ser desenvolvida em Node.JS, e deverá ser possível:
+- Salário compatível com o mercado.
+- Vale transporte.
+- Plano de saúde.
+- Plano odontológico.
+- Vale Refeição ou Vale Alimentação.
 
-- Listar todos os TODO's.
-- Adicionar um novo TODO.
-- Alterar um TODO.
-- Deletar um TODO.
+#### Diferenciais
 
-## Entrega
+- Equipe unida, divertida e apaixonada por hambúrgueres.
+- Cafeteira sempre cheia :P
+- O gerente às vezes paga o almoço.
+- Emendas em feriados nacionais.
 
-Para iniciar o teste, faça um fork deste repositório, crie uma branch com o seu nome completo e depois envie-nos o pull request. Se você apenas clonar o repositório não vai conseguir fazer push e depois vai ser mais complicado fazer o pull request.
+## Requisitos
 
-Envie também seu currículo atualizado para o email curriculo@dotlib.com.br.
+**Obrigatórios:**
 
-## Nossa análise
+- Mínimo 1 ano de experiência em desenvolvimento de sites e sistemas em NodeJS e ReactJS.
+- Conhecimentos em Docker.
+- Controle de versões (GIT).
+- Conhecimentos em Linux.
+- TDD.
 
-- Organização do código, separação de módulos, legibilidade e comentários.
-- Testes.
-- Histórico de commits.
+**Diferenciais:**
 
-## Dúvidas?
+- Experiência em PHP com Laravel.
 
-Quaisquer dúvidas que você venha a ter, consulte as issues para ver se alguém já não a fez e caso você não ache sua resposta, abra você mesmo uma nova issue!
+## Contratação
 
-### Boa sorte!
+Regime: CLT
+
+## Como se candidatar
+
+Para se candidatar, basta acessar a url e realizar o teste para a vaga:
+[https://github.com/dotlib/teste-desenvolvedor-pleno](teste.md)
