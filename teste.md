@@ -10,7 +10,7 @@ Você deve desenvolver uma API, utilizando Node.JS, para uma aplicação de gere
 
 A escolha das bibliotecas, banco de dados, arquitetura, etc, fica a seu critério.
 
-O código precisa rodar em macOS ou Ubuntu (preferencialmente como container Docker) e precisa ter cobertura de testes.
+O código precisa rodar em macOS ou Ubuntu (preferencialmente como container Docker).
 
 Altere o arquivo README explicando o que é preciso para rodar sua aplicação.
 
@@ -32,7 +32,6 @@ Envie também seu currículo atualizado para o email curriculo@dotlib.com.br.
 ## Nossa análise
 
 - Organização do código, separação de módulos, legibilidade e comentários.
-- Testes.
 - Histórico de commits.
 
 ## Dúvidas?

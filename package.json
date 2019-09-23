@@ -1,0 +1,30 @@
+{
+  "name": "teste-desenvolvedor-pleno",
+  "version": "1.0.0",
+  "description": "[![](http://www.dotlib.com.br/site/images/footer/bra.png)](http://www.dotlib.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "api-node"
+  ],
+  "author": "Rafael Moura",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno/issues"
+  },
+  "homepage": "https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno#readme",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
