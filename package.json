@@ -1,0 +1,22 @@
+{
+  "name": "teste-desenvolvedor-pleno",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env  ./app.js",
+    "test": "mocha --require babel-register tests/*.js --exit"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.1.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mocha": "^6.2.1",
+    "mongoose": "^5.7.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.19.3"
+  }
+}
