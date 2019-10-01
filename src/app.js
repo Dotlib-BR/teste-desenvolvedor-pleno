@@ -1,3 +1,6 @@
+import "core-js/stable"
+import "regenerator-runtime/runtime"
+
 import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
@@ -21,4 +24,6 @@ server.use(express.json())
 server.use(cors())
 server.use(routes)
 
-server.listen(process.env.PORT)
+server.listen(process.env.PORT, () => {
+    console.log(`API running on port: ${process.env.PORT}`)
+})
