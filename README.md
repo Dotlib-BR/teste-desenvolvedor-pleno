@@ -1,4 +1,4 @@
-Para rodar esta aplicação basta executar o camando `docker-compose up`. Caso seja a primeira execução, então: ``docker-compose up --build`.
+Para rodar esta aplicação basta executar o camando `docker-compose up`. Caso seja a primeira execução, então: `docker-compose up --build`.
  
 ## API
 Esta aplicação expõe uma api RESTful com os seguintes endpoints:
