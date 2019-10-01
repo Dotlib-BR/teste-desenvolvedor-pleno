@@ -13,7 +13,7 @@ const server = express()
 
 
 mongoose.connect(
-    `mongodb://localhost/${process.env.MOBGO_DB}`,
+    `mongodb://mongo:27017/${process.env.MOBGO_DB}`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
