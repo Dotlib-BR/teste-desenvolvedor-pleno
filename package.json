@@ -4,6 +4,7 @@
   "description": "[![](http://www.dotlib.com.br/site/images/footer/bra.png)](http://www.dotlib.com)",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./src/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
