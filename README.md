@@ -28,7 +28,7 @@ Para rodar o projeto na sua maquina e ter acesso ao core;
 Após a instação do node e github e docker localmente vamos precisar rodar alguns comandos no seu terminal de comando:
 
 ```
-git clone https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno/edit/master/README.md
+git clone https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno
 ```
 
 ```
