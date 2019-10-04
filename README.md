@@ -31,6 +31,9 @@ Após a instação do node e github e docker localmente vamos precisar rodar alg
 git clone https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno
 ```
 ```
+cd teste-desenvolvedor-pleno
+```
+```
 npm install
 ```
 ```
