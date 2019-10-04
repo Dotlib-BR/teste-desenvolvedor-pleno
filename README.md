@@ -30,10 +30,11 @@ Após a instação do node e github e docker localmente vamos precisar rodar alg
 ```
 git clone https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno
 ```
-
+```
+npm install
+```
 ```
 npm start
-
 ```
 Abra uma nova guia do terminal e execute o comando docker para rodar o banco em mongo
 ```
@@ -42,7 +43,7 @@ docker run -p 27017:27017 --rm --name api-db -d mongo
 
 A idea da api é o desacoplamento e consumir da forma que você acha melhor, isso pode incluir algumas ferramentas como Postman, insomnia ou cURL, nos exemplos abaixo optei em consumir as rotas pela linha de comando com o cURL.
 
-/POST
+### /POST
 ```
 curl http://localhost:3000/api/v1/todos -X POST \
 -H "Content-Type: application/json" \
@@ -52,27 +53,35 @@ curl http://localhost:3000/api/v1/todos -X POST \
 Esse comando é usado para enviar o TODO 
 *campo body obrigatório
 
-/GET
+### /GET
 ```
 curl -i http://localhost:3000/api/v1/todos
 ```
 Esse campo é usado para listar TODO's
 
+### /GET
+```
+curl -i http://localhost:3000/api/v1/todos/d968bce73c95d3ffac14db8
+```
+Esse campo é usado para listar TODO especifico por id{d968bce73c95d3ffac14db8}
 
-/DELETE
+
+### /DELETE
 ```
 curl -X "DELETE" http://localhost:3000/api/v1/todos/5d968bce73c95d3ffac14db8
 ```
-*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
+No metodo DELETE é obrigatório inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}*
 
 
-/PUT
+### /PUT
 ```
 curl http://localhost:3000/api/v1/todos/5d968ceb73c95d3ffac14db9 -X PUT \
 -H "Content-Type: application/json" \
 -d '{"name": "atualizando com put"}'
 ```
-*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
+No metodo PUT é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}**
+
+**Em nossos exemplos foram usadas IDs imaginárias, no seu caso usar a id cadastrada no banco
 
 ## Built With
 * Node
@@ -86,7 +95,7 @@ curl http://localhost:3000/api/v1/todos/5d968ceb73c95d3ffac14db9 -X PUT \
 
 ## Considerações finais
 
-A proposta foi apresetar os meus conhecimentos como dev Frontend, foi interessante também como forma de reforçar e aprender alguns conceitos como API em node para react em que utilizei o framework hapi pela primeira vez
+A proposta foi apresetar os meus conhecimentos como desenvolvedor, foi interessante também como forma de reforçar e aprender alguns conceitos como API em Node, em que utilizei o framework hapi pela primeira vez.
 
 Como todo projeto sempre pode ficar melhor se eu tivesse a oportunidade de trabalhar um pouco mais nele eu teria:
-Trabalhado melhor algumas validações
+- Trabalhado melhor algumas validações
