@@ -70,7 +70,7 @@ Esse campo é usado para listar TODO especifico por id{d968bce73c95d3ffac14db8}
 ```
 curl -X "DELETE" http://localhost:3000/api/v1/todos/5d968bce73c95d3ffac14db8
 ```
-*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
+No metodo DELETE é obrigatório inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}*
 
 
 ### /PUT
@@ -79,7 +79,9 @@ curl http://localhost:3000/api/v1/todos/5d968ceb73c95d3ffac14db9 -X PUT \
 -H "Content-Type: application/json" \
 -d '{"name": "atualizando com put"}'
 ```
-*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
+No metodo PUT é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}**
+
+**Em nossos exemplos foram usadas IDs imaginárias, no seu caso usar a id cadastrada no banco
 
 ## Built With
 * Node
