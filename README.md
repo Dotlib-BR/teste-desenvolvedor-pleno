@@ -95,7 +95,7 @@ No metodo PUT é obrigatrío inserir o ID após o recurso, no caso do nosso exem
 
 ## Considerações finais
 
-A proposta foi apresetar os meus conhecimentos como dev Frontend, foi interessante também como forma de reforçar e aprender alguns conceitos como API em node para react em que utilizei o framework hapi pela primeira vez
+A proposta foi apresetar os meus conhecimentos como desenvolvedor, foi interessante também como forma de reforçar e aprender alguns conceitos como API em Node, em que utilizei o framework hapi pela primeira vez.
 
 Como todo projeto sempre pode ficar melhor se eu tivesse a oportunidade de trabalhar um pouco mais nele eu teria:
-Trabalhado melhor algumas validações
+- Trabalhado melhor algumas validações
