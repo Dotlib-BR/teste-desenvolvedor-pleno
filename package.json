@@ -24,6 +24,7 @@
   "homepage": "https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno#readme",
   "dependencies": {
     "@hapi/hapi": "^18.4.0",
+    "@hapi/joi": "^15.1.1",
     "mongoose": "^5.7.3"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
 const todosHandler = require("./handlers/todos");
+const Joi = require('@hapi/joi');
 
 module.exports = [
   {
@@ -14,7 +15,14 @@ module.exports = [
   {
     method: "POST",
     path: "/api/v1/todos",
-    handler: todosHandler.save
+    handler: todosHandler.save,
+    options: {
+      validate: {
+          payload: {
+              name: Joi.string().min(1).max(140)
+          }
+      }
+    }
   },
   {
     method: "DELETE",
