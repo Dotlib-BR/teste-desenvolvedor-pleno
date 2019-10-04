@@ -65,8 +65,28 @@ curl -X "DELETE" http://localhost:3000/api/v1/todos/5d968bce73c95d3ffac14db8
 ```
 *no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
 
+
+/PUT
+```
+curl http://localhost:3000/api/v1/todos/5d968ceb73c95d3ffac14db9 -X PUT \
+-H "Content-Type: application/json" \
+-d '{"name": "atualizando com put"}'
+```
+*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
+
 ## Built With
 * Node
 * mongoose
 * Hapi
 * Docker
+
+## Autor
+
+* **Rafael Moura** - [Linkedin](https://www.linkedin.com/in/rafaelmouradev/)
+
+## Considerações finais
+
+A proposta foi apresetar os meus conhecimentos como dev Frontend, foi interessante também como forma de reforçar e aprender alguns conceitos como API em node para react em que utilizei o framework hapi pela primeira vez
+
+Como todo projeto sempre pode ficar melhor se eu tivesse a oportunidade de trabalhar um pouco mais nele eu teria:
+Trabalhado melhor algumas validações
