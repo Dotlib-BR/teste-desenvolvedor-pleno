@@ -42,7 +42,28 @@ docker run -p 27017:27017 --rm --name api-db -d mongo
 
 A idea da api é o desacoplamento e consumir da forma que você acha melhor, isso pode incluir algumas ferramentas como Postman, insomnia ou cURL, nos exemplos abaixo optei em consumir as rotas pela linha de comando com o cURL.
 
+/POST
+```
+curl http://localhost:3000/api/v1/todos -X POST \
+-H "Content-Type: application/json" \
+-d '{"name":"enviando um post"}'
 
+```
+Esse comando é usado para enviar o TODO 
+*campo body obrigatório
+
+/GET
+```
+curl -i http://localhost:3000/api/v1/todos
+```
+Esse campo é usado para listar TODO's
+
+
+/DELETE
+```
+curl -X "DELETE" http://localhost:3000/api/v1/todos/5d968bce73c95d3ffac14db8
+```
+*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
 
 ## Built With
 * Node
