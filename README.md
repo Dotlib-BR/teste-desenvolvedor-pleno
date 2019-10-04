@@ -36,12 +36,13 @@ cd teste-desenvolvedor-pleno
 ```
 npm install
 ```
-```
-npm start
-```
 Abra uma nova guia do terminal e execute o comando docker para rodar o banco em mongo
 ```
 docker run -p 27017:27017 --rm --name api-db -d mongo
+```
+Finalmente...
+```
+npm start
 ```
 
 A idea da api é o desacoplamento e consumir da forma que você acha melhor, isso pode incluir algumas ferramentas como Postman, insomnia ou cURL, nos exemplos abaixo optei em consumir as rotas pela linha de comando com o cURL.
