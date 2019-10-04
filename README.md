@@ -1,53 +1,92 @@
-[![](http://www.dotlib.com.br/site/images/footer/bra.png)](http://www.dotlib.com)
+<h1 align="center">
+  <br>
+  <a href="https://dotlib.com/en"><img src="https://jornadas.fccn.pt/wp-content/uploads/2018/02/dotlib.png" alt="Parafernalia Interativa" width="200"></a>
+  <br>
+</h1>
 
-## Nossa empresa
+<h4 align="center">Desafio Técnico desenvolvido para a <a href="https://dotlib.com/en" target="_blank">dot.lib</a>.</h4>
 
-A Dot.Lib distribui conteúdo online científico e acadêmico a centenas de instituições espalhadas pela América Latina. Temos como parceiras algumas das principais editoras científicas nacionais e internacionais. Além de prover conteúdo, criamos soluções que atendem às necessidades de nossos clientes e editoras.
 
-## Descrição da vaga
+<p align="center">
+  <a href="#Introdução">Introdução</a> •
+  <a href="#Pré-requisitos">Pré requisitos</a> •
+  <a href="#Rodando-o-projeto">Rodando o Projeto</a> •
+  <a href="#Deployment">Deployment</a> •
+  <a href="#Built-With">Built With</a> •
+  <a href="#Autor">Autor</a> •
+</p>
 
-Buscamos um profissional que seja apaixonado por desenvolvimento, inovação e novas tecnologias, para integrar nosso time em projetos baseados em NodeJS, PHP e React JS/Native.
 
-## Local
+## API TODO's
 
-Barra da Tijuca, RJ
+API, utilizando Node.JS, para uma aplicação de gerenciamento de TODO's.
 
-A oportunidade é 100% presencial.
+### Rodando o projeto
 
-## Benefícios
+Para rodar o projeto na sua maquina e ter acesso ao core;
 
-- Salário compatível com o mercado.
-- Vale transporte.
-- Plano de saúde.
-- Plano odontológico.
-- Vale Refeição ou Vale Alimentação.
+Após a instação do node e github e docker localmente vamos precisar rodar alguns comandos no seu terminal de comando:
 
-#### Diferenciais
+```
+git clone https://github.com/RafaelMouraFrontend/teste-desenvolvedor-pleno
+```
 
-- Equipe unida, divertida e apaixonada por hambúrgueres.
-- Cafeteira sempre cheia :P
-- O gerente às vezes paga o almoço.
-- Emendas em feriados nacionais.
+```
+npm start
 
-## Requisitos
+```
+Abra uma nova guia do terminal e execute o comando docker para rodar o banco em mongo
+```
+docker run -p 27017:27017 --rm --name api-db -d mongo
+```
 
-**Obrigatórios:**
+A idea da api é o desacoplamento e consumir da forma que você acha melhor, isso pode incluir algumas ferramentas como Postman, insomnia ou cURL, nos exemplos abaixo optei em consumir as rotas pela linha de comando com o cURL.
 
-- Mínimo 1 ano de experiência em desenvolvimento de sites e sistemas em NodeJS e ReactJS.
-- Conhecimentos em Docker.
-- Controle de versões (GIT).
-- Conhecimentos em Linux.
-- TDD.
+/POST
+```
+curl http://localhost:3000/api/v1/todos -X POST \
+-H "Content-Type: application/json" \
+-d '{"name":"enviando um post"}'
 
-**Diferenciais:**
+```
+Esse comando é usado para enviar o TODO 
+*campo body obrigatório
 
-- Experiência em PHP com Laravel.
+/GET
+```
+curl -i http://localhost:3000/api/v1/todos
+```
+Esse campo é usado para listar TODO's
 
-## Contratação
 
-Regime: CLT
+/DELETE
+```
+curl -X "DELETE" http://localhost:3000/api/v1/todos/5d968bce73c95d3ffac14db8
+```
+*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
 
-## Como se candidatar
 
-Para se candidatar, basta acessar a url e realizar o teste para a vaga:
-[https://github.com/dotlib/teste-desenvolvedor-pleno](teste.md)
+/PUT
+```
+curl http://localhost:3000/api/v1/todos/5d968ceb73c95d3ffac14db9 -X PUT \
+-H "Content-Type: application/json" \
+-d '{"name": "atualizando com put"}'
+```
+*no campo delete é obrigatrío inserir o ID após o recurso, no caso do nosso exemplo seria {5d968bce73c95d3ffac14db8}
+
+## Built With
+* Node
+* mongoose
+* Hapi
+* Docker
+
+## Autor
+
+* **Rafael Moura** - [Linkedin](https://www.linkedin.com/in/rafaelmouradev/)
+
+## Considerações finais
+
+A proposta foi apresetar os meus conhecimentos como dev Frontend, foi interessante também como forma de reforçar e aprender alguns conceitos como API em node para react em que utilizei o framework hapi pela primeira vez
+
+Como todo projeto sempre pode ficar melhor se eu tivesse a oportunidade de trabalhar um pouco mais nele eu teria:
+Trabalhado melhor algumas validações
