@@ -1,7 +1,19 @@
 import * as ApolloServer from "apollo-server";
 import GraphQLJSON from "graphql-type-json";
 import merge from "lodash/merge";
-import Tasks from "./task/types";
+
+// CORE
+import getConnection from "./core/services/database";
+
+// RESOLVERS
+import { resolvers as taskResolvers } from "./task/resolvers";
+
+// TYPES
+import Task from "./task/types";
+
+// DATASOURCES
+import TaskDatasource from "./task/datasources.mjs";
+import TaskLoader from "./task/loaders.mjs";
 
 const gql = "gql" in ApolloServer ? ApolloServer.gql : ApolloServer.default.gql;
 
@@ -20,8 +32,33 @@ const Query = gql`
   }
 `;
 
-export const typeDefs = [Tasks, Query];
+export const resolvers = merge({ JSON: GraphQLJSON }, taskResolvers);
+
+export const mountLoaders = datasource => ({
+  task: new TaskLoader(datasource.task)
+});
+
+export const mountDatasource = () => ({
+  task: TaskDatasource()
+});
+
+export const typeDefs = [Task, Query];
+
+export async function buildContext({ req }) {
+  // console.log(req);
+  const datasource = mountDatasource();
+  const loaders = mountLoaders(datasource);
+
+  return {
+    loaders,
+    datasource,
+    db: getConnection(),
+    headers: req.headers
+  };
+}
 
 export default {
-  typeDefs
+  resolvers,
+  typeDefs,
+  buildContext
 };

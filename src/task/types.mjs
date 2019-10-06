@@ -2,7 +2,7 @@ import * as ApolloServer from "apollo-server";
 
 const gql = "gql" in ApolloServer ? ApolloServer.gql : ApolloServer.default.gql;
 
-const Tasks = gql`
+const Task = gql`
   extend type Query {
     task(id: Int, name: String): Task
     tasks(offset: Int, limit: Int): Tasks
@@ -18,4 +18,4 @@ const Tasks = gql`
   }
 `;
 
-export default Tasks;
+export default Task;
