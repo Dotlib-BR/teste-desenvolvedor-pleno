@@ -32,6 +32,8 @@ const Query = gql`
   }
 `;
 
+export const typeDefs = [Task, Query];
+
 export const resolvers = merge({ JSON: GraphQLJSON }, taskResolvers);
 
 export const mountLoaders = datasource => ({
@@ -42,10 +44,7 @@ export const mountDatasource = () => ({
   task: TaskDatasource()
 });
 
-export const typeDefs = [Task, Query];
-
 export async function buildContext({ req }) {
-  // console.log(req);
   const datasource = mountDatasource();
   const loaders = mountLoaders(datasource);
 

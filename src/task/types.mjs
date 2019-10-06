@@ -16,6 +16,21 @@ const Task = gql`
     id: Int!
     name: String!
   }
+
+  extend type Mutation {
+    createTask(task: TaskInput): Task
+    updateTask(task: UpdateTaskInput): Task
+    deleteTask(id: Int!): Int
+  }
+
+  input TaskInput {
+    name: String
+  }
+
+  input UpdateTaskInput {
+    id: Int!
+    name: String!
+  }
 `;
 
 export default Task;

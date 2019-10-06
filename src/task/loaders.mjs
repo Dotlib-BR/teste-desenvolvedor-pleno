@@ -4,8 +4,7 @@ export default class TaskLoader {
   constructor(datasource) {
     this.datasource = datasource;
 
-    this.getById = new DataLoader(this.byId.bind(this));
-
+    this.getById = new DataLoader(this.byId.bind(this), { cache: false });
     this.getAll = new DataLoader(this.getAll.bind(this), { cache: false });
   }
 

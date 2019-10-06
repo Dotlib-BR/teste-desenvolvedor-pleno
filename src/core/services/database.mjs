@@ -1,10 +1,9 @@
 import knex from "knex";
 import config from "../../config";
-import { memoize } from "../helpers/functional.mjs";
 
 const env = config[config.NODE_ENV];
 
-const connect = () => {
+const getConnection = () => {
   const connection = knex({
     client: "mysql",
     connection: {
@@ -17,7 +16,5 @@ const connect = () => {
   });
   return connection;
 };
-
-const getConnection = memoize(connect);
 
 export default getConnection;
