@@ -26,6 +26,19 @@ function routes(Todo) {
             });
         });
 
+    todoRouter.use('/todos/:todoID', (req, res, next) => {
+        Todo.findById(req.params.todoID, (err, todo) => {
+            if (err) {
+                return res.send(err);
+            }
+            if (todo) {
+                req.todo = todo;
+                return next();
+            }
+            return res.sendStatus(404);
+        });
+    });
+
     return todoRouter;
 }
 
