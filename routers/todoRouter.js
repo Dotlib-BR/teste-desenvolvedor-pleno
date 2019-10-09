@@ -73,6 +73,14 @@ function routes(Todo) {
                 }
                 return res.json(todo);
             });
+        })
+        .delete((req, res) => {
+            req.todo.remove((err) => {
+                if (err) {
+                    return res.send(err);
+                }
+                return res.sendStatus(204);
+            });
         });
 
     return todoRouter;
