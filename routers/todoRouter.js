@@ -55,6 +55,24 @@ function routes(Todo) {
                 }
                 return res.json(todo);
             });
+        })
+        .patch((req, res) => {
+            const { todo } = req;
+
+            if (req.body._id) {
+                delete req.body._id;
+            }
+            Object.entries(req.body).forEach((item) => {
+                const key = item[0];
+                const value = item[1];
+                todo[key] = value;
+            });
+            todo.save((err) => {
+                if (err) {
+                    return res.send(err);
+                }
+                return res.json(todo);
+            });
         });
 
     return todoRouter;
