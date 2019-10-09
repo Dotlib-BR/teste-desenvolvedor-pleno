@@ -39,6 +39,11 @@ function routes(Todo) {
         });
     });
 
+    todoRouter.route('/todos/:todoID')
+        .get((req, res) => {
+            return res.json(req.todo);
+        });
+
     return todoRouter;
 }
 
