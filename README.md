@@ -1,53 +1,80 @@
 [![](http://www.dotlib.com.br/site/images/footer/bra.png)](http://www.dotlib.com)
 
-## Nossa empresa
+## Dependências
+- Nodejs 12
+- NPM 6+
+- Knex
+- Docker
+- Docker Compose
 
-A Dot.Lib distribui conteúdo online científico e acadêmico a centenas de instituições espalhadas pela América Latina. Temos como parceiras algumas das principais editoras científicas nacionais e internacionais. Além de prover conteúdo, criamos soluções que atendem às necessidades de nossos clientes e editoras.
+## Como rodar o projeto
 
-## Descrição da vaga
+Dentro do diretório do projeto, rodar o seguinte comando:
 
-Buscamos um profissional que seja apaixonado por desenvolvimento, inovação e novas tecnologias, para integrar nosso time em projetos baseados em NodeJS, PHP e React JS/Native.
+- `sudo docker-compose up --build -d`
+Este comando ir inicializar uma instancia do MYSQL e a API.
 
-## Local
+Após o término do comando acima, rodar o seguinte comando: 
 
-Barra da Tijuca, RJ
+- `npm run migrate`
+Este comando irá iniciar um database preparado para o consumo da aplicação.
 
-A oportunidade é 100% presencial.
+Após o término do comando acima, basta acessar:
 
-## Benefícios
+- `http://localhost:4000`
 
-- Salário compatível com o mercado.
-- Vale transporte.
-- Plano de saúde.
-- Plano odontológico.
-- Vale Refeição ou Vale Alimentação.
+## Exemplos de Query e Mutation
 
-#### Diferenciais
+### Buscar uma Tarefa específica baseada em seu ID.
+```js
+query getTask($id: Int) {
+  task(id: $id){
+    id
+    name
+  }
+}
+``` 
 
-- Equipe unida, divertida e apaixonada por hambúrgueres.
-- Cafeteira sempre cheia :P
-- O gerente às vezes paga o almoço.
-- Emendas em feriados nacionais.
+### Buscar uma lista de Tarefas(getAll).
 
-## Requisitos
+Verificar opções de parametros disponíveis dentro do Playground.
 
-**Obrigatórios:**
+```js
+query getAllTasks($offset: Int, $limit: Int) {
+  tasks(offset: $offset, limit: $limit) {
+    list{
+      id
+      name      
+    }
+  }
+}
+``` 
 
-- Mínimo 1 ano de experiência em desenvolvimento de sites e sistemas em NodeJS e ReactJS.
-- Conhecimentos em Docker.
-- Controle de versões (GIT).
-- Conhecimentos em Linux.
-- TDD.
+### Criar uma Tarefa
+```js
+mutation CreateTask($taskInput: TaskInput!) {
+  createTask(task: $taskInput) {
+    id
+    name
+  }
+}
+``` 
 
-**Diferenciais:**
+### Atualizar uma tarefa
+```js
+mutation UpdateTask($taskInput: UpdateTaskInput!) {
+  updateTask(task: $taskInput) {
+    id
+    name
+  }
+}
+``` 
 
-- Experiência em PHP com Laravel.
+### Deletar uma Tarefa
+```js
+mutation DeleteTask($id: Int!) {
+  deleteTask(id: $id)
+}
+```
 
-## Contratação
 
-Regime: CLT
-
-## Como se candidatar
-
-Para se candidatar, basta acessar a url e realizar o teste para a vaga:
-[https://github.com/dotlib/teste-desenvolvedor-pleno](teste.md)
