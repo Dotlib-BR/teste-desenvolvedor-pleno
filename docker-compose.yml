@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 services:
   mysql:
     image: mysql
@@ -6,24 +6,25 @@ services:
     restart: always
     ports: 
       - "3306:3306"
-    environment:
-      MYSQL_DATABASE: Local
-      MYSQL_ROOT_PASSWORD: root
-    networks:
-      - app-network
     expose:
       - "3306"
-    networks:
-      - app-network
-  api_test_dev:
-    build: ./
-    command: sh -c "npm install && npm start"
     environment:
-      - NODE_ENV=development
-      - PORT=4000
+      MYSQL_DATABASE: local
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: "root"
+    expose:
+      - "3306"
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "npm install && npm start"
     ports:
       - "4000:4000"
-    working_dir: /app
-networks:
-  app-network:
-    driver: bridge
+    links:
+      - mysql:mysql
+    depends_on:
+      - mysql
+    expose:
+      - "4000"

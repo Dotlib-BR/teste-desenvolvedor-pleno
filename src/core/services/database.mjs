@@ -9,6 +9,7 @@ const getConnection = () => {
     connection: {
       host: env.host,
       database: env.database,
+      port: env.port,
       user: env.username,
       password: env.password
     },
