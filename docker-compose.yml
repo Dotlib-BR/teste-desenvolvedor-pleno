@@ -1,15 +1,27 @@
 version: '3'
 services:
-  api:
-    container_name: docker-api
-    build: ./backend
-    restart: always
-    ports:
-      - '3000:3000'
-    depends_on:
-      - mongo
   mongo:
     container_name: mongo
     image: mongo
     ports:
       - '27017:27017'
+  api:
+    container_name: docker-api
+    build: ./backend/
+    command: npm run start
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./backend:/usr/src/api
+    depends_on:
+      - mongo
+  app:
+    container_name: docker-app
+    build: ./frontend/
+    command: npm run start
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend:/usr/src/app
+    depends_on:
+      - api
