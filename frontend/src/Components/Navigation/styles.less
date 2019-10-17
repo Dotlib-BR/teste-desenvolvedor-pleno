@@ -1,0 +1,43 @@
+@import './../../Mixins.less';
+
+#menu{
+    background:@branco;
+    nav{
+        ul{
+            list-style:none;
+            float:left;
+            margin:0;
+            li{
+                float:left;
+                padding:15px;
+                border-top:4px solid @branco;
+                a{
+                    &:link,
+                    &:visited{
+                        display:block;
+                        .setFont(18px, @primaria );
+                        font-weight:bold;
+                        text-decoration:none;
+                    }
+                }
+                &:first-child{
+                    padding:15px 15px 15px 0;
+                }
+                &:last-child{
+                    a{
+                        &:link,
+                        &:visited{
+                            color:#4078c0;
+                        }
+                    }
+                }
+                &:hover{
+                    border-color:@primaria;
+                    &:last-child{
+                        border-color:#4078c0;
+                    }
+                }
+            }
+        }
+    }
+}

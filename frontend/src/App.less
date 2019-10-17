@@ -1,0 +1,137 @@
+@import 'https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1';
+
+@import './Mixins.less';
+
+//
+//	Reset
+//
+header, section, footer, article, figcaption, hgroup, figure, details, aside, img, nav, time {display:block;}
+audio, canvas, video {display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}
+input[type="search"],
+input[type="submit"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	border-radius:0;
+	-webkit-border-radius:0;
+}
+
+*{margin:0;padding:0;outline:none;}
+a:active,
+a:selected,
+a:focus,
+a:visited{border:none;outline:none;text-decoration:none;}
+a:focus{
+	outline:none;
+	text-decoration:none;
+}
+
+html>object{display:none;}
+
+//
+//	Animação Circular
+//
+@-webkit-keyframes move{
+	0%{	.rotation(0deg); }
+	100%{ .rotation(359deg); }
+}
+@-moz-keyframes move{
+	0%{	.rotation(0deg); }
+	100%{ .rotation(359deg); }
+}
+@-o-keyframes move{
+	0%{	.rotation(0deg); }
+	100%{ .rotation(359deg); }
+}
+@keyframes move{
+	0%{	.rotation(0deg); }
+	100%{ .rotation(359deg); }
+}
+
+@-moz-keyframes spin { 
+	100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+	100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+	100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+}
+
+//
+//	Ellipsis
+//
+.ellipsis{
+	white-space:nowrap;                  
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+*{
+	margin:0;
+	padding:0;
+	outline:0;
+	box-sizing:border-box;
+}
+
+html{
+	height:100%;
+	width:100%;
+	display:block;
+	body{
+		.gradient(#eee, #ddd, to right);
+		display:block;
+		position:relative;
+	}
+}
+
+//
+//	Loading
+//
+.loading{
+	display:block;
+	width:100%;
+	height:80px;
+	margin:0;
+	position:relative;
+	margin:40px 0;
+	&:before{
+		content:"\f2bd";
+		.setFontAweSolid(70px, @primaria);
+		.transition();
+		display:block;
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:80px;
+		margin-top:-40px;
+		margin-left:-40px;
+		height:80px;
+		line-height:80px;
+		text-align:center;
+		-webkit-animation:spin 2.5s linear infinite;
+		-moz-animation:spin 2.5s linear infinite;
+		animation:spin 2.5s linear infinite;
+	}
+	&:after{
+		content:attr(data-val);
+		position:absolute;
+		margin:15px 0 0 0;
+		top:100%;
+		.setFont(14px, @branco);
+	}
+}
+
+//
+//	Page Header
+//
+.pageHeader{
+	padding:30px 0 45px;
+	h1{
+		margin:0;
+		.setFont(28px, @primaria);
+		font-weight:bold;
+	}
+}

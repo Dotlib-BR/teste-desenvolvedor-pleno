@@ -1,0 +1,191 @@
+//
+//	Definições URL
+//
+@imageUrl: '../images';
+@cssUrl: '../css';
+@fontUrl: '../fonts';
+@baseMargin: 15px;
+
+//
+//	Fontes Importadas
+//
+
+//
+//	Definições de cores de texto
+//
+@preto:#000000;
+@branco:#ffffff;
+@cinza:#868e91;
+@primaria:#a73737;
+@secundaria:#7a2828;
+
+@textColor:@cinza;
+@titleColor:@preto;
+@defaultTextColor:@cinza;
+@SourceSans: 'Source Sans Pro', Arial, sans-serif;
+@AdventPro: 'Advent Pro', sans-serif;
+
+
+//
+//	Bordas
+//
+.borderRadius (@radius: 3px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+//
+//	Sombra no box
+//
+.boxShadow (@hor: 3px, @vert: 2px, @blur: 5px, @spread: 0, @shadow: @defaultTextColor) {
+	-webkit-box-shadow: @hor @vert @blur @spread @shadow;
+	-moz-box-shadow: @hor @vert @blur @spread @shadow;
+	box-shadow: @hor @vert @blur @spread @shadow;
+}
+
+//
+//	Remove boxShadow
+//
+.removeBoxShadow(){
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+//
+//	Sobra no texto
+//
+.textShadow (@hor: 1px, @vert: 1px, @blur: 0px, @shadow: @defaultTextColor){
+	text-shadow: @hor @vert @blur @shadow;
+	-moz-text-shadow: @hor @vert @blur @shadow;
+	-webkit-text-shadow: @hor @vert @blur @shadow;
+}
+
+//
+//	Transição
+//
+.transition (@range: all, @time: 0.25s, @ease: ease-in-out) {
+	-moz-transition: @range @time @ease;
+	-webkit-transition: @range @time @ease;
+	-o-transition: @range @time @ease;
+	transition: @range @time @ease;
+}
+
+//
+//	Rotação
+//
+.rotation (@deg: -45deg){
+	-webkit-transform: rotate(@deg);/* Safari */
+	-o-transform: rotate(@deg);/* Opera */
+	-moz-transform: rotate(@deg);/* Firefox */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */
+}
+
+//
+// appearance
+//
+.appearance(@val: none){
+	-webkit-appearance: @val;
+	-moz-appearance:    @val;
+	appearance:         @val;
+}
+
+//
+//	Setar Fonte
+//
+.setFont(@size: 13px, @color: @defaultTextColor, @face: @AdventPro){
+	font-family: @face;
+	line-height: @size + 2px;
+	font-weight: normal;
+	font-size: @size;
+	color: @color;
+}
+
+.setFontAwe(@size: 14px, @color: @preto){
+	font:normal normal normal @size/1 'Font Awesome\ 5 Free';
+	color:@color;
+	line-height:@size;
+}
+
+.setFontAweBrands(@size: 14px, @color: @preto){
+	font:normal normal normal @size/1 'Font Awesome\ 5 Brands';
+	color:@color;
+	line-height:@size;
+}
+
+.setFontAweSolid(@size: 14px, @color: @preto){
+	font:bold normal normal @size/1 'Font Awesome\ 5 Free';
+	color:@color;
+	line-height:@size;
+}
+
+//
+//	Opacidade
+//
+.opacity (@opacity: 0.5) {
+	-webkit-opacity:@opacity;
+	-moz-opacity:@opacity;
+	opacity:@opacity;
+}
+
+//
+//	Gradiente
+//
+.gradient(@cor1: @defaultTextColor, @cor2: @defaultTextColor, @pos: to right){
+	background: -webkit-linear-gradient(@pos, @cor1, @cor2);
+	background: -o-linear-gradient(@pos, @cor1, @cor2);
+	background: -moz-linear-gradient(@pos, @cor1, @cor2);
+	background: linear-gradient(@pos, @cor1, @cor2);
+}
+
+//
+//	Imagens responsivas
+//
+.imgResponsive(){
+	display:block;
+	max-width:100%;
+	height:auto;
+}
+
+//
+//	Background cover e contains
+//
+.bgCover(@cor : rgba(25,25,25,0.9)) {
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color:@cor;
+}
+
+.bgContain(@cor : rgba(25,25,25,0.9)) {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color:@cor;
+}
+
+.hexToRgba(@color, @alpha: 1) {
+	@red: red(@color);
+	@green: green(@color);
+	@blue: blue(@color);
+	background: rgba(@red, @green, @blue, @alpha);
+}
+
+.translate(@pos1: -50%, @pos2: -50%){
+	-ms-transform: translate(@pos1, @pos2);
+	-webkit-transform: translate(@pos1, @pos2);
+	transform: translate(@pos1, @pos2);
+}
+
+.ellipsis(){
+	white-space:nowrap; 
+	overflow:hidden;
+	text-overflow:ellipsis;
+}

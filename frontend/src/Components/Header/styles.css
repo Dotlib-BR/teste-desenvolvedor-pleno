@@ -1,0 +1,119 @@
+header#mainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(139, 8, 8, 0.9);
+  border-top: 4px solid rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+header#mainHeader h1 {
+  margin: 0;
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 26px;
+  font-weight: normal;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+header#mainHeader h1 a:link,
+header#mainHeader h1 a:visited {
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 30px;
+  font-weight: normal;
+  font-size: 28px;
+  color: #ffffff;
+  text-decoration: none;
+}
+header#mainHeader > ul#mainMenu {
+  margin: 0;
+}
+header#mainHeader > ul#mainMenu > li {
+  display: inline-block;
+  position: relative;
+}
+header#mainHeader > ul#mainMenu > li > a:link,
+header#mainHeader > ul#mainMenu > li > a:visited {
+  margin: 0 25px;
+  display: block;
+  text-decoration: none;
+}
+header#mainHeader > ul#mainMenu > li > a:link span,
+header#mainHeader > ul#mainMenu > li > a:visited span {
+  display: none;
+}
+header#mainHeader > ul#mainMenu > li > a:link:before,
+header#mainHeader > ul#mainMenu > li > a:visited:before {
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+header#mainHeader > ul#mainMenu > li > a:link.pearls:before,
+header#mainHeader > ul#mainMenu > li > a:visited.pearls:before {
+  content: "\f036";
+  font: bold normal normal 24px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 24px;
+}
+header#mainHeader > ul#mainMenu > li > a:link.login,
+header#mainHeader > ul#mainMenu > li > a:visited.login {
+  margin-right: 0;
+}
+header#mainHeader > ul#mainMenu > li > a:link.login:before,
+header#mainHeader > ul#mainMenu > li > a:visited.login:before {
+  content: "\f2f6";
+  font: bold normal normal 24px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 24px;
+}
+header#mainHeader > ul#mainMenu > li > a:link.logout,
+header#mainHeader > ul#mainMenu > li > a:visited.logout {
+  margin-right: 0;
+}
+header#mainHeader > ul#mainMenu > li > a:link.logout:before,
+header#mainHeader > ul#mainMenu > li > a:visited.logout:before {
+  content: "\f2f5";
+  font: bold normal normal 24px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 24px;
+}
+header#mainHeader > ul#mainMenu > li > a:link.config,
+header#mainHeader > ul#mainMenu > li > a:visited.config {
+  margin: 0;
+}
+header#mainHeader > ul#mainMenu > li > a:link.config:before,
+header#mainHeader > ul#mainMenu > li > a:visited.config:before {
+  content: "\f013";
+  font: bold normal normal 24px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 24px;
+}
+header#mainHeader > ul#mainMenu > li > a:hover:before {
+  color: #a73737 !important;
+}
+header#mainHeader > ul#mainMenu > li > span {
+  margin: 0 25px;
+  display: block;
+  text-decoration: none;
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 18px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 14px;
+  text-align: right;
+}
+header#mainHeader > ul#mainMenu > li > span span {
+  display: block;
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 14px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 12px;
+}

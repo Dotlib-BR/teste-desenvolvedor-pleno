@@ -1,0 +1,37 @@
+#menu {
+  background: #ffffff;
+}
+#menu nav ul {
+  list-style: none;
+  float: left;
+  margin: 0;
+}
+#menu nav ul li {
+  float: left;
+  padding: 15px;
+  border-top: 4px solid #ffffff;
+}
+#menu nav ul li a:link,
+#menu nav ul li a:visited {
+  display: block;
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #a73737;
+  font-weight: bold;
+  text-decoration: none;
+}
+#menu nav ul li:first-child {
+  padding: 15px 15px 15px 0;
+}
+#menu nav ul li:last-child a:link,
+#menu nav ul li:last-child a:visited {
+  color: #4078c0;
+}
+#menu nav ul li:hover {
+  border-color: #a73737;
+}
+#menu nav ul li:hover:last-child {
+  border-color: #4078c0;
+}

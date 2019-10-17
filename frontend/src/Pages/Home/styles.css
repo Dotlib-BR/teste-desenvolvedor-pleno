@@ -1,0 +1,246 @@
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #a73737;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 15px 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.card figure {
+  display: block;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  float: left;
+}
+.card .info {
+  padding: 0 15px;
+  width: calc(100% - 140px);
+  float: left;
+}
+.card .info h2 {
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 24px;
+  font-weight: normal;
+  font-size: 22px;
+  color: #7a2828;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .info p {
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #868e91;
+  margin: 0 0 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .info .descricao {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 0 0 0;
+}
+.card .info .descricao p {
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #868e91;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card .actions {
+  position: absolute;
+  top: calc(50% - 40px);
+  right: 15px;
+  display: block;
+  padding: 0;
+}
+.card .actions button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+.card .actions button span {
+  display: none;
+}
+.card .actions button.edit {
+  background: rgba(54, 122, 224, 0.8);
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.card .actions button.edit:before {
+  content: "\f303";
+  font: bold normal normal 16px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 16px;
+  line-height: 40px;
+  text-align: center;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.card .actions button.edit:hover {
+  background: rgba(54, 122, 224, 0.3);
+}
+.card .actions button.edit:hover:before {
+  color: rgba(54, 122, 224, 0.9);
+}
+.card .actions button.remove {
+  background: rgba(155, 50, 36, 0.8);
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.card .actions button.remove:before {
+  content: "\f2ed";
+  font: bold normal normal 16px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 16px;
+  line-height: 40px;
+  text-align: center;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.card .actions button.remove:hover {
+  background: rgba(155, 50, 36, 0.3);
+}
+.card .actions button.remove:hover:before {
+  color: rgba(155, 50, 36, 0.9);
+}
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .card {
+    margin: 0 0 15px 0;
+    display: block;
+    position: relative;
+  }
+  .card figure {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    display: block;
+    float: right;
+  }
+  .card .info {
+    padding: 0;
+    order: 3;
+    width: 100%;
+    clear: both;
+    padding: 15px 0 0 0;
+  }
+  .card .actions {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: block;
+    padding: 0;
+  }
+}
+.pagination {
+  width: 100%;
+  text-align: center;
+}
+.pagination ul {
+  list-style: none;
+}
+.pagination ul li {
+  display: inline-block;
+  margin: 0;
+}
+.pagination ul li button,
+.pagination ul li > span {
+  display: block;
+  border: 1px solid transparent;
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #a73737;
+  font-weight: 600;
+  background: transparent;
+  padding: 5px;
+  width: 30px;
+}
+.pagination ul li button span.prev:before {
+  content: "\f0d9";
+  font: bold normal normal 15px/1 'Font Awesome\ 5 Free';
+  color: #a73737;
+  line-height: 15px;
+  line-height: 14px;
+}
+.pagination ul li button span.next:before {
+  content: "\f0da";
+  font: bold normal normal 15px/1 'Font Awesome\ 5 Free';
+  color: #a73737;
+  line-height: 15px;
+  line-height: 14px;
+}
+.pagination ul li.active > span {
+  border: 1px solid #a73737;
+  background: #a73737;
+  color: #ffffff;
+}
+.filtros {
+  margin: 0 0 15px 0;
+}
+.filtros .sStl {
+  position: relative;
+  background: rgba(139, 8, 8, 0.9);
+  border-top: 4px solid rgba(0, 0, 0, 0.2);
+}
+.filtros .sStl:before {
+  content: "\f0d7";
+  font: bold normal normal 20px/1 'Font Awesome\ 5 Free';
+  color: #ffffff;
+  line-height: 20px;
+  position: absolute;
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 30px;
+}
+.filtros .sStl > select {
+  border: none;
+  padding: 25px 80px 25px 25px;
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #ffffff;
+  width: 100%;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.filtros .sStl > select option {
+  font-family: 'Advent Pro', sans-serif;
+  line-height: 16px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #000000;
+}

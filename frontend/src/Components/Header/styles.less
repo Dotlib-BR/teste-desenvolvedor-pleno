@@ -1,0 +1,97 @@
+@import './../../Mixins.less';
+
+header{
+    &#mainHeader{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:15px 0;
+        position:relative;
+        top:0;
+        left:0;
+        width:100%;
+        background:rgba(139, 8, 8, 0.9);
+        border-top:4px solid rgba(0,0,0,0.2);
+        z-index:10;
+        h1{
+            margin:0;
+            .setFont(24px, @branco);
+            font-weight:bold;
+            a{
+                &:link,
+                &:visited{
+                    .setFont(28px, @branco);
+                    text-decoration:none;
+                }
+            }
+        }
+        > ul{
+            &#mainMenu{
+                margin:0;
+                > li{
+                    display:inline-block;
+                    position:relative;
+                    > a{
+                        &:link,
+                        &:visited{
+                            margin:0 25px;
+                            display:block;
+                            text-decoration:none;
+                            span{
+                                display:none;
+                            }
+                            &:before{
+                                .transition();
+                            }
+                            &.pearls{
+                                &:before{
+                                    content:"\f036";
+                                    .setFontAweSolid(24px, @branco);
+                                }
+                            }
+                            &.login{
+                                margin-right:0;
+                                &:before{
+                                    content:"\f2f6";
+                                    .setFontAweSolid(24px, @branco);
+                                }
+                            }
+                            &.logout{
+                                margin-right:0;
+                                &:before{
+                                    content:"\f2f5";
+                                    .setFontAweSolid(24px, @branco);
+                                }
+                            }
+                            &.config{
+                                margin:0;
+                                &:before{
+                                    content:"\f013";
+                                    .setFontAweSolid(24px, @branco);
+                                }
+                            }
+                        }
+                        &:hover{
+                            &:before{
+                                color:@primaria !important;
+                            }
+                        }
+                    }
+                    > span{
+                        margin:0 25px;
+                        display:block;
+                        text-decoration:none;
+                        .setFont(16px, @branco);
+                        line-height:14px;
+                        text-align:right;
+                        span{
+                            display:block;
+                            .setFont(12px, @branco);
+                            line-height:12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

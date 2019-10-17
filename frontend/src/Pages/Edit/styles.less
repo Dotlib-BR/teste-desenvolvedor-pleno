@@ -1,0 +1,122 @@
+@import './../../Mixins.less';
+
+.boxEdit{
+    background:rgba(139, 8, 8, 0.9);
+    width:100%;
+    .borderRadius(4px);
+    overflow: hidden;
+    margin:40px 0;
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:0 0 1px 0;
+        h2{
+            margin:0;
+            .setFont(22px, @branco);
+            font-weight:bold;
+            padding:26px;
+            background:rgba(0,0,0,0.2);
+            width:100%;
+        }
+        a{
+            &:link,
+            &:visited{
+                display:block;
+                background:rgba(0,0,0,0.2);
+                margin-left:1px;
+                padding:25px;
+                width:76px;
+                height:76px;
+                text-align:center;
+                text-decoration:none;
+                &.back{
+                    &:before{
+                        .setFontAweSolid(20px, @branco);
+                        content:"\f0d9";
+                    }
+                }
+                &:before{
+                    line-height:22px;
+                    .opacity(0.7);
+                }
+            }
+            span{display:none;}
+        }
+    }
+    .content{
+        form{
+            fieldset{
+                border:0;
+                legend{
+                    display:none;
+                }
+                .formGroup{
+                    background:rgba(0,0,0,0.1);
+                    margin:0 0 1px 0;
+                    ::-webkit-input-placeholder { /* Edge */
+                        color:@branco;
+                    }
+                    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                        color:@branco;
+                    }
+                    ::placeholder{
+                        color:@branco;
+                    }
+                    input{
+                        &[type="text"],
+                        &[type="password"]{
+                            height:65px;
+                            border:none;
+                            padding:25px;
+                            .setFont(18px, @branco);
+                            width:100%;
+                            background:transparent;
+                        }
+                    }
+                    .sStl{
+                        position:relative;
+                        &:before{
+                            content:"\f0d7";
+                            .setFontAweSolid(20px, @branco);
+                            position:absolute;
+                            .translate(0, -50%);
+                            top:50%;
+                            right:30px;
+                        }
+                        > select{
+                            height:65px;
+                            border:none;
+                            padding:23px 80px 23px 25px;
+                            .setFont(18px, @branco);
+                            width:100%;
+                            background:transparent;
+                            outline:none;
+                            .boxShadow(0,0,0,0,transparent);
+                            .appearance();
+                            option{
+                                .setFont(14px, @preto);
+                            }
+                        }
+                    }
+                    button{
+                        &[type="submit"]{
+                            background:rgba(0,0,0,.4);
+                            height:65px;
+                            border:none;
+                            padding:25px;
+                            width:100%;
+                            .setFont(18px, @branco);
+                            font-weight:bold;
+                            .transition();
+                            &:hover{
+                                background:rgba(0,0,0,.2);
+                                cursor:pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
