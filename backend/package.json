@@ -1,0 +1,24 @@
+{
+  "name": "docker-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server",
+    "test": "mocha --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2",
+    "mocha": "^6.2.1",
+    "mockgoose": "^8.0.3",
+    "chai": "^4.2.0"
+  }
+}
