@@ -1,6 +1,8 @@
 Para rodar esta aplicação basta executar o camando docker-compose up. 
 Caso seja a primeira execução, então: docker-compose up --build.
 
+O backend está por padrão na porta 4000, e o frontend na porta 3000
+
 Ao executar o comando acima, basta fazer requisições com curl ou ferramentas como postman ou insomnia
 
 API
