@@ -31,6 +31,9 @@ const Home = (props) => {
                 title="Tarefas"
                 columns={columns}
                 data={props.todo.length > 0 ? props.todo : []}
+                pagination={true}
+                paginationPerPage={5}
+                paginationRowsPerPageOptions={[5,10,15,20]}
             />
         </>
     )
