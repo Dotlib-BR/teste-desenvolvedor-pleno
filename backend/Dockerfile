@@ -1,5 +1,4 @@
-FROM node:alpine
-RUN npm install npm@latest -g
+FROM node
 
 WORKDIR /usr/src/api
 
