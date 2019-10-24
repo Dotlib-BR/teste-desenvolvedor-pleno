@@ -7,21 +7,21 @@ services:
       - '27017:27017'
   api:
     container_name: docker-api
-    build: ./backend/
-    command: npm run start
+    build: ./backend
+    expose:
+      - 4000
     ports:
       - '4000:4000'
-    volumes:
-      - ./backend:/usr/src/api
-    depends_on:
+    links:
       - mongo
+    command: sh -c 'npm install && npm run start'
   app:
     container_name: docker-app
-    build: ./frontend/
-    command: npm run start
+    build: ./frontend
+    expose:
+      - 3000
     ports:
       - '3000:3000'
-    volumes:
-      - ./frontend:/usr/src/app
-    depends_on:
+    links:
       - api
+    command: sh -c 'npm install && npm run start'
